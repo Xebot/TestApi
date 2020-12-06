@@ -89,7 +89,7 @@ namespace TestApi
             }
             catch (Exception e)
             {
-
+                //TODO: Add logging;
             }            
         }
     }
