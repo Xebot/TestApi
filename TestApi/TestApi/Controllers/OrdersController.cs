@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TestApi.Contracts.Models;
@@ -28,6 +26,7 @@ namespace TestApi.Controllers
         /// <param name="customerId">Идентификатор пользователя.</param>
         /// <param name="pageNumber">Номер страницы.</param>
         /// <param name="pageSize">Количество запрашиваемых элементов.</param>
+        [HttpGet]
         public async Task<IActionResult> Get(int customerId, int pageNumber, int pageSize)
         {
             var validationResult = ValidatePagedInput(pageNumber - 1, pageSize, customerId);
